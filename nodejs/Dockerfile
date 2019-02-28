@@ -10,6 +10,7 @@ FROM node:alpine
 #RUN npm install koa-logger
 #RUN npm install koa-body
 #RUN npm install koa-router
+#RUN npm install swig
 
 #COPY .
 #VOLUME ["/app"]
