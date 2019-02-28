@@ -1,0 +1,32 @@
+version: '3'
+services:
+#  certbot:
+#    image: certbot/certbot
+
+  nodejs:
+    build: nodejs/
+    container_name: nodejs
+    volumes:
+      - /home/arch/Git/makegood/:/app
+    working_dir: /app
+    command:
+      - npm install swig
+    environment:
+      NODE_ENV: development
+#    ports:
+#      - 3000:3000
+    command: npm run start
+
+  nginx:
+#    depends_on:
+#      - nodejs
+    build: nginx/
+    container_name: nginx
+    ports:
+      - 80:80
+#      - 443:443
+#    links:
+#      - nodejs:nodejs
+#    tty: true
+#    command: service nginx restart
+    restart: always
