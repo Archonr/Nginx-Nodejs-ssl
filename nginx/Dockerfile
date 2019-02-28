@@ -20,4 +20,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 #EXPOSE 80
 
 # Define default command
-#CMD service nginx start
+#CMD service nginx start ### не работает так как контейнер умирает после того как выполняет команду!!!!
