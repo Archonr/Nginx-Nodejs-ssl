@@ -7,7 +7,7 @@ services:
     build: nodejs/
     container_name: nodejs
     volumes:
-      - /home/arch/Git/makegood/:/app
+      - app/:/app
     working_dir: /app
     command:
       - npm install swig
